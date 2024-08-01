@@ -11,6 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: ThemeData(primaryColor: Colors.black),
+      darkTheme: ThemeData(primarySwatch:Colors.blue),
       debugShowCheckedModeBanner: false,
       home: Learning_page(),
     );

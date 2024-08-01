@@ -18,9 +18,9 @@ class _ListPassState extends State<ListPass> {
 
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: OurAppColor.colorC,
+          backgroundColor: OurAppColor.colorE,
           title: const Text(
-            'List Learning_page 1',
+            'List Learning Page Two',
             style: TextStyle(color: Colors.white),
           )),
       body: Column(

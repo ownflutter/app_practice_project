@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Learning_page extends StatefulWidget {
-  const Learning_page({super.key});
+   Learning_page({super.key});
+  String a = "a";
 
   @override
   State<Learning_page> createState() => _Learning_pageState();
@@ -21,7 +22,7 @@ class _Learning_pageState extends State<Learning_page> {
       appBar: AppBar(
           backgroundColor: OurAppColor.colorC,
           title: const Text(
-            'List Learning_page',
+            'List Learning Page One',
             style: TextStyle(color: Colors.white),
           )),
       body: Column(
