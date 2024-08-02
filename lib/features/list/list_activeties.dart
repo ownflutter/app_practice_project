@@ -19,11 +19,53 @@ class _Learning_pageState extends State<Learning_page> {
 
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: OurAppColor.colorC,
-          title: const Text(
-            'List Learning_page',
-            style: TextStyle(color: Colors.white),
-          )),
+        backgroundColor: OurAppColor.colorC,
+        title: const Text(
+          'List Learning_page',
+          style: TextStyle(color: Colors.white),
+        ),
+        iconTheme: IconThemeData(
+          color: Colors.white, // Set the drawer icon color to white
+        ),
+      ),
+      drawer: Container(
+        height: 300,
+        width: 150,
+        child: Drawer(
+          backgroundColor: Colors.white.withOpacity(0.5),
+          child: Container(
+            height: 100,
+            child: Center(
+              child: Text(
+                "Right Drawer",
+                style: TextStyle(color: Colors.black),
+              ),
+            ),
+          ),
+        ),
+      ),
+      endDrawer:Container(
+        height: 300,
+        width: 150,
+        child: Drawer(
+          backgroundColor: Colors.white.withOpacity(0.5),
+          child: Container(
+            height: 100,
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: ElevatedButton(
+                    onPressed: () {
+                      Get.to(() => ListPass(
+                        map: city,
+                      ));
+                    },
+                    child: Text("PASS WB ")),
+              )
+            ),
+          ),
+        ),
+      ),
       body: Column(
         children: [
           Expanded(
@@ -42,9 +84,11 @@ class _Learning_pageState extends State<Learning_page> {
             padding: const EdgeInsets.all(10.0),
             child: ElevatedButton(
                 onPressed: () {
-                  Get.to(() => ListPass(map: city,));
+                  Get.to(() => ListPass(
+                        map: city,
+                      ));
                 },
-                child: Text("PASS WB ")),
+                child: Text("PASS List Page")),
           )
         ],
       ),
