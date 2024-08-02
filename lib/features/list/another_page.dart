@@ -18,6 +18,7 @@ class _ListPassState extends State<ListPass> {
 
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.white),
           backgroundColor: OurAppColor.colorC,
           title: const Text(
             'List Learning_page 1',
