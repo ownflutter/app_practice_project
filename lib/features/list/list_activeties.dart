@@ -44,7 +44,7 @@ class _Learning_pageState extends State<Learning_page> {
                 onPressed: () {
                   Get.to(() => ListPass(map: city,));
                 },
-                child: Text("PASS list ")),
+                child: Text("PASS WB ")),
           )
         ],
       ),
