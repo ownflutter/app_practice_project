@@ -38,6 +38,7 @@ class _Learning_pageState extends State<Learning_page> {
               ),
             ),
           ),
+
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: ElevatedButton(
