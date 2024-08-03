@@ -1,10 +1,7 @@
 import 'package:app_practice_project/features/dashboard/dashboard_controller.dart';
-import 'package:app_practice_project/features/dashboard/news/news_page_view.dart';
-import 'package:app_practice_project/features/dashboard/profile/profile_view.dart';
 import 'package:app_practice_project/features/homepage/homepage_view.dart';
-import 'package:app_practice_project/features/list/another_page.dart';
-import 'package:app_practice_project/features/list/right_drawer.dart';
-import 'package:app_practice_project/utils/colors.dart';
+import 'package:app_practice_project/features/news/news_page_view.dart';
+import 'package:app_practice_project/features/profile/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +9,7 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<DashboardController>(
-      init: DashboardController(), // Ensure the controller is initialized
+      init: DashboardController(),
       builder: (controller) {
         return Scaffold(
           body: SafeArea(

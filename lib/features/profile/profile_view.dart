@@ -1,5 +1,5 @@
 
-import 'package:app_practice_project/features/dashboard/profile/profile_controller.dart';
+import 'package:app_practice_project/features/profile/profile_controller.dart';
 import  'package:flutter/material.dart';
 import 'package:get/get.dart';
 

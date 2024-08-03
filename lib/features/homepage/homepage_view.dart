@@ -74,7 +74,7 @@ class HomePage extends GetView<HomeController> {
                   map: city,
                 ));
               },
-              child:Text("PASS List Page"),
+              child:Text(controller.man.value),
             ),
           ),
         ],
