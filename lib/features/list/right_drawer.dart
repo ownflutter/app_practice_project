@@ -1,5 +1,7 @@
 import 'package:app_practice_project/features/dashboard/dashboard_view.dart';
 import 'package:app_practice_project/features/homepage/homepage_view.dart';
+import 'package:app_practice_project/features/news/news_page_view.dart';
+import 'package:app_practice_project/features/profile/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -38,6 +40,16 @@ class _RightDrawerState extends State<RightDrawer> {
                           Get.to(() => Dashboard());
                         },
                         child: Text("Dashboard")),
+                    ElevatedButton(
+                        onPressed: () {
+                          Get.to(() => NewsPage());
+                        },
+                        child: Text("News Page")),
+                    ElevatedButton(
+                        onPressed: () {
+                          Get.to(() => ProfilePage());
+                        },
+                        child: Text("Profile")),
                   ],
                 ),
               ),

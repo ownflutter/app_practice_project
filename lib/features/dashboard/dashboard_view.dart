@@ -34,9 +34,11 @@ class Dashboard extends StatelessWidget {
               currentIndex: controller.tabIndex.value,
               type: BottomNavigationBarType.fixed,
               items: [
-                _bottomNavigationBarItem(icon: Icons.home, label: 'Home'),
-                _bottomNavigationBarItem(icon: Icons.ad_units, label: 'News'),
-                _bottomNavigationBarItem(icon: Icons.newspaper_sharp, label: 'Profile'),
+                _bottomNavigationBarItem(icon: Icons.home, label: 'Home', text: 'Home'),
+                _bottomNavigationBarItem(
+                    icon: Icons.newspaper_sharp, label: 'News', text: 'News'),
+                _bottomNavigationBarItem(
+                    icon: Icons.person_rounded, label: 'Profile', text: 'Profile'),
               ],
             );
           }),
@@ -45,7 +47,16 @@ class Dashboard extends StatelessWidget {
     );
   }
 
-  BottomNavigationBarItem _bottomNavigationBarItem({required IconData icon, required String label}) {
-    return BottomNavigationBarItem(icon: Icon(icon), label: label);
+  BottomNavigationBarItem _bottomNavigationBarItem(
+      {required IconData icon, required String label,required String text}) {
+    return BottomNavigationBarItem(
+        icon: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon),
+            Text(text),
+          ],
+        ),
+        label: label);
   }
 }

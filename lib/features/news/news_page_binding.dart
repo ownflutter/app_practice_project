@@ -6,5 +6,4 @@ class NewsPageBinding extends Bindings{
   void dependencies() {
  Get.lazyPut(() => NewsController());
   }
-
 }

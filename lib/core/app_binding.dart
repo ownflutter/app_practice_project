@@ -1,7 +1,4 @@
 
-
-
-
 import 'package:app_practice_project/core/dio_helper/app_interceptor.dart';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
