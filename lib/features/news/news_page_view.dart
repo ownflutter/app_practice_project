@@ -11,7 +11,7 @@ class NewsPage extends GetView<NewsController> {
       appBar: AppBar(
         backgroundColor: OurAppColor.colorC,
         title: const Text(
-          'News Page',
+          'NewsPage',
           style: TextStyle(color: Colors.white),
         ),
         iconTheme: const IconThemeData(

@@ -40,5 +40,4 @@ class Dio_Helper {
     return  ((connectivityResult == ConnectivityResult.mobile || connectivityResult == ConnectivityResult.wifi));
   }
 
-
 }
