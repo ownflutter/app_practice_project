@@ -1,7 +1,6 @@
 import 'package:app_practice_project/features/profile/profile_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../utils/colors.dart';
 
 class ProfilePage extends GetView<ProfileController> {
@@ -9,6 +8,9 @@ class ProfilePage extends GetView<ProfileController> {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController textEditingController = TextEditingController();
+
+
     return Scaffold(
         appBar: AppBar(
           backgroundColor: OurAppColor.colorC,
@@ -27,8 +29,34 @@ class ProfilePage extends GetView<ProfileController> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("A"),
-                Text("A"),
+                Row(
+                  children: [
+                    Container(
+                      width: 220,
+                      child: TextField(
+                        controller: textEditingController,
+                      ),
 
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        controller.updateText(textEditingController.text);
+
+                      },
+                      child:Text("Show Text"),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Obx(() => Container(
+                  height: 40,
+                  color: OurAppColor.colorPrimary,
+                  child:Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(controller.inputText.isNotEmpty ? controller.inputText.value : 'No data' ,
+                      style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 20),),
+                  ),
+                ))
               ],
 
             ),
