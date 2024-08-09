@@ -9,5 +9,4 @@ class ProfileController extends GetxController{
   void updateText(String text) {
     inputText.value = text;
   }
-
 }
