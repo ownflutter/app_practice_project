@@ -19,7 +19,8 @@ class NewsPage extends GetView<NewsController> {
         ),
       ),
       body: Container(
-        child: Center(child:  Obx(() =>Text(controller.man2.value))),
+        child: Center(
+            child: Obx(() =>Text(controller.man2.value))),
       ),
     );
   }
