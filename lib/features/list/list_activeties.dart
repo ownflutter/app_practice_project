@@ -1,5 +1,5 @@
 import 'package:app_practice_project/features/list/another_page.dart';
-import 'package:app_practice_project/features/list/newpahe_ostad.dart';
+import 'package:app_practice_project/features/list/newpage_ostad.dart';
 import 'package:app_practice_project/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -71,11 +71,13 @@ class _Learning_pageState extends State<Learning_page> {
               ),
             ),
           ),
+
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                LinearProgressIndicator(),
                 ElevatedButton(
                   onPressed: () {
                     myAlertDialog(context);
@@ -85,7 +87,7 @@ class _Learning_pageState extends State<Learning_page> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Get.to(()=> NewPage());
+                    Get.to(()=> GridViewPage("Next Page here"));
                   },
                   child: Text("Next Page"),
                   style: buttonStyle,

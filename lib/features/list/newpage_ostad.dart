@@ -1,20 +1,23 @@
+import 'package:app_practice_project/features/list/tabpage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class NewPage extends StatelessWidget {
-  NewPage({super.key});
+class GridViewPage extends StatelessWidget {
+  String msg;
+  GridViewPage(this.msg,{super.key});
   var image = [
-    {"img": 'https://mahafujer-protfolio.vercel.app/assets/profile-pic.png.png', 'title': ' Munna'},
     {"img": 'https://avatars.githubusercontent.com/u/135857612?v=4', 'title': ' Anamika'},
     {"img": 'https://media.licdn.com/dms/image/D5635AQHHKmj1O9p4zA/profile-framedphoto-shrink_400_400/0/1719437249602?e=1724068800&v=beta&t=9MsIsM6XzE-oShnNjOY-WTSqLM1TBRpwoNbZ0OkscK4', 'title': ' Sunny'},
     {"img": 'https://media.licdn.com/dms/image/D5635AQHHKmj1O9p4zA/profile-framedphoto-shrink_400_400/0/1719437249602?e=1724068800&v=beta&t=9MsIsM6XzE-oShnNjOY-WTSqLM1TBRpwoNbZ0OkscK4', 'title': ' Sunny'},
-    {"img": 'https://mahafujer-protfolio.vercel.app/assets/about-pic.png', 'title': ' Example'},
-    {"img": 'https://mahafujer-protfolio.vercel.app/assets/about-pic.png', 'title': ' Example'},
     {"img": 'https://avatars.githubusercontent.com/u/135857612?v=4', 'title': ' Anamika'},
     {"img": 'https://avatars.githubusercontent.com/u/135857612?v=4', 'title': ' Anamika'},
     {"img": 'https://avatars.githubusercontent.com/u/135857612?v=4', 'title': ' Anamika'},
-    {"img": 'https://mahafujer-protfolio.vercel.app/assets/about-pic.png', 'title': ' Example'},
-    {"img": 'https://mahafujer-protfolio.vercel.app/assets/about-pic.png', 'title': ' Example'},
+    {"img": 'https://avatars.githubusercontent.com/u/135857612?v=4', 'title': ' Anamika'},
+    {"img": 'https://avatars.githubusercontent.com/u/135857612?v=4', 'title': ' Anamika'},
+    {"img": 'https://media.licdn.com/dms/image/D5635AQHHKmj1O9p4zA/profile-framedphoto-shrink_400_400/0/1719437249602?e=1724068800&v=beta&t=9MsIsM6XzE-oShnNjOY-WTSqLM1TBRpwoNbZ0OkscK4', 'title': ' Sunny'},
+    {"img": 'https://media.licdn.com/dms/image/D5635AQHHKmj1O9p4zA/profile-framedphoto-shrink_400_400/0/1719437249602?e=1724068800&v=beta&t=9MsIsM6XzE-oShnNjOY-WTSqLM1TBRpwoNbZ0OkscK4', 'title': ' Sunny'},
+    {"img": 'https://media.licdn.com/dms/image/D5635AQHHKmj1O9p4zA/profile-framedphoto-shrink_400_400/0/1719437249602?e=1724068800&v=beta&t=9MsIsM6XzE-oShnNjOY-WTSqLM1TBRpwoNbZ0OkscK4', 'title': ' Sunny'},
+    {"img": 'https://media.licdn.com/dms/image/D5635AQHHKmj1O9p4zA/profile-framedphoto-shrink_400_400/0/1719437249602?e=1724068800&v=beta&t=9MsIsM6XzE-oShnNjOY-WTSqLM1TBRpwoNbZ0OkscK4', 'title': ' Sunny'},
     {"img": 'https://media.licdn.com/dms/image/D5635AQHHKmj1O9p4zA/profile-framedphoto-shrink_400_400/0/1719437249602?e=1724068800&v=beta&t=9MsIsM6XzE-oShnNjOY-WTSqLM1TBRpwoNbZ0OkscK4', 'title': ' Sunny'},
   ];
   myshowSnacbar(massage, context) {
@@ -26,8 +29,15 @@ class NewPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("GridView"),
+          title: Text("Grid View, $msg"),
           backgroundColor: Colors.blue,
+          actions: [
+            GestureDetector(
+                onTap: (){
+                  Get.to(()=> TapBar());
+                },
+                child: Icon(Icons.play_arrow))
+          ],
         ),
         body: GridView.builder(
             gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
