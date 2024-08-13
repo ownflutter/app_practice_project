@@ -32,7 +32,7 @@ class TapBar extends StatelessWidget {
           body: Center(
             child: TabBarView(
               children: [
-                Learning_page(),
+                Text("1"),
                 Text("2"),
                 Text("3"),
                 Text("4"),

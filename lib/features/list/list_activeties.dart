@@ -30,33 +30,51 @@ class _Learning_pageState extends State<Learning_page> {
       appBar: AppBar(
         toolbarOpacity: 1,
         backgroundColor: OurAppColor.colorC,
-        title: const Text(
-          'List Page',
-          style: TextStyle(color: Colors.white),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+             Text(
+              'appbartitle'.tr,
+              style: TextStyle(color: Colors.white),
+            ),
+            TextButton(
+              onPressed: () {
+                Get.updateLocale(Locale('bn','BD'));
+              },
+              style: TextButton.styleFrom(
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.language_sharp,color: Colors.white,),
+                  Text(
+                    'Bn',
+                    style: TextStyle(fontSize: 12,color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Get.updateLocale(Locale('en','US'));
+              },
+              style: TextButton.styleFrom(
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.language_sharp,color: Colors.white,),
+                  Text(
+                    'En',
+                    style: TextStyle(fontSize: 12,color: Colors.white,),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
-        actions: [
-          IconButton(
-              onPressed: () {
-                MyshowSnacbar("I am Comment", context);
-              },
-              icon: Icon(Icons.comment, color: Colors.white)),
-          IconButton(
-              onPressed: () {
-                MyshowSnacbar("I am Safe", context);
-              },
-              icon: Icon(Icons.safety_check, color: Colors.white)),
-          IconButton(
-              onPressed: () {
-                MyshowSnacbar("I am Email", context);
-              },
-              icon: Icon(Icons.email, color: Colors.white)),
-          IconButton(
-              onPressed: () {
-                MyshowSnacbar("I am Setting", context);
-              },
-              icon: Icon(Icons.settings, color: Colors.white)),
-        ],
       ),
+
       body: Column(
         children: [
           Expanded(
@@ -82,14 +100,14 @@ class _Learning_pageState extends State<Learning_page> {
                   onPressed: () {
                     myAlertDialog(context);
                   },
-                  child: Text("Click Me"),
+                  child: Text("click".tr),
                   style: buttonStyle,
                 ),
                 ElevatedButton(
                   onPressed: () {
                     Get.to(()=> GridViewPage("Next Page here"));
                   },
-                  child: Text("Next Page"),
+                  child: Text("nextpage".tr),
                   style: buttonStyle,
                 ),
               ],
@@ -103,7 +121,7 @@ class _Learning_pageState extends State<Learning_page> {
                         map: city,
                       ));
                 },
-                child: Text("PASS List - from Dev ")),
+                child: Text("listPage".tr)),
           ),
         ],
       ),
@@ -136,46 +154,6 @@ class _Learning_pageState extends State<Learning_page> {
           }
         },
       ),
-      endDrawer: Drawer(
-          child: ListView(
-        children: [
-          DrawerHeader(
-              padding: EdgeInsets.all(0),
-              child: UserAccountsDrawerHeader(
-                accountName: Text('Gulshanara Anamika'),
-                accountEmail: Text('anamika@gmail.com'),
-                currentAccountPicture:
-                    Icon(Icons.person, size: 50, color: Colors.white),
-              )),
-          ListTile(
-              title: Text("Anamika's Home,Go Back"),
-              leading: Icon(Icons.home),
-              onTap: () {
-                Get.back();
-              }),
-          ListTile(
-            title: Text("Anamika's Contact"),
-            leading: Icon(Icons.contact_emergency),
-            onTap: () {
-              MyshowSnacbar("Anamika's Contact", context);
-            },
-          ),
-          ListTile(
-            title: Text("Anamika's Profile"),
-            leading: Icon(Icons.verified_user),
-            onTap: () {
-              MyshowSnacbar("Anamika's Profile", context);
-            },
-          ),
-          ListTile(
-            title: Text("Anamika's Phone"),
-            leading: Icon(Icons.phone),
-            onTap: () {
-              MyshowSnacbar("Anamika's Phone", context);
-            },
-          ),
-        ],
-      )),
       drawer: Drawer(
           child: ListView(
         children: [
@@ -230,7 +208,7 @@ class _Learning_pageState extends State<Learning_page> {
         builder: (BuildContext context) {
           return Expanded(
               child: AlertDialog(
-            title: Text("Save Me"),
+            title: Text("saveme".tr),
             content: Text("Are you sure!"),
                 actions: [
                   TextButton(
