@@ -1,5 +1,6 @@
 import 'package:app_practice_project/features/list/another_page.dart';
 import 'package:app_practice_project/features/list/newpage_ostad.dart';
+import 'package:app_practice_project/features/loccalization/newCarouselView.dart';
 import 'package:app_practice_project/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -95,10 +96,11 @@ class _Learning_pageState extends State<Learning_page> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                LinearProgressIndicator(),
+                //LinearProgressIndicator(),
                 ElevatedButton(
                   onPressed: () {
-                    myAlertDialog(context);
+                   Get.to(()=> NewCarouselView());
+                    //myAlertDialog(context);
                   },
                   child: Text("click".tr),
                   style: buttonStyle,
